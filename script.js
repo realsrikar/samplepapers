@@ -7,6 +7,10 @@ select.addEventListener("change", e => {
   const selected = select.value;
 
   printresult(selected);
+
+  result.classList.add('animate');
+
+  setTimeout(_ => result.classList.remove('animate'), 400)
 });
 
 function printresult(subject) {

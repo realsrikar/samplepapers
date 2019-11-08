@@ -23,10 +23,15 @@ select { font-size: 1.2em; }
      justify-content: center;
      -ms-align-items: center;
      align-items: center;
+     transition: 170ms all ease-in-out
      ;
 }
  a {
      display: block;
      margin: 1em 0;
      font-size: 2em;
+}
+
+.animate {
+     opacity: .6;
 }
