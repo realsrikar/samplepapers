@@ -1,0 +1,27 @@
+a {
+  display: block;
+}
+
+body {
+	margin: 0;
+    min-height: 100vh;
+}
+
+.result {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+embed {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+@media (max-width: 700px) {
+	.result {
+		grid-template-columns: unset;
+		grid-template-rows: repeat(100vh, 2)
+	}
+}
