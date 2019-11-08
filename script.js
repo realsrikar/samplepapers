@@ -9,10 +9,12 @@ select.addEventListener("change", e => {
   printresult(selected);
 });
 
-function printresult(subject) {
+function printresult(subject, element = "iframe") {
+	try {
   const html = [
   	`http://cbseacademic.nic.in/web_material/SQP/ClassXII_2019_20/${subject}_SQP.pdf`,
     `http://cbseacademic.nic.in/web_material/SQP/ClassXII_2019_20/${subject}_MS.pdf`
-  ].map(link => `<iframe src="${link}"></iframe>`).join('');
+  ].map(link => `<${element} href="${link}" src="${link}">${link}</${element}>`).join('');
   result.innerHTML = html;
+} catch (error) { printresult(subject, "a") }
 }
