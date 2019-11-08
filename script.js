@@ -13,6 +13,6 @@ function printresult(subject) {
   const html = [
   	`http://cbseacademic.nic.in/web_material/SQP/ClassXII_2019_20/${subject}_SQP.pdf`,
     `http://cbseacademic.nic.in/web_material/SQP/ClassXII_2019_20/${subject}_MS.pdf`
-  ].map(link => `<embed src="${link}">`).join('');
+  ].map(link => `<iframe src="${link}"></iframe>`).join('');
   result.innerHTML = html;
 }

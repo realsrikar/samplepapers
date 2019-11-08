@@ -13,10 +13,12 @@ body {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-embed {
+iframe {
 	height: 100%;
 	width: 100%;
 	display: block;
+	border: none;
+	
 }
 
 @media (max-width: 700px) {
