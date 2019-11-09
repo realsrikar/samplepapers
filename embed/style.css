@@ -9,7 +9,6 @@ a {
 select { font-size: 1.2em; }
  body {
      margin: 0;
-     padding-top: 3em;
      text-align: center;
      min-height: 100vh;
      max-width: 100%;
