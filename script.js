@@ -17,7 +17,18 @@ function printresult(subject) {
   const html = [
     `<a target="_blank" href="http://cbseacademic.nic.in/web_material/SQP/ClassXII_2019_20/${subject}_SQP.pdf">Sample Paper</a>`,
     `<a target="_blank" href="http://cbseacademic.nic.in/web_material/SQP/ClassXII_2019_20/${subject}_MS.pdf">Answers</a>`,
-    `<a target="_blank" href="http://cbseacademic.nic.in/web_material/CurriculumMain20/SrSecondary/${subject}.pdf">Curriculum</a>`
+    `<a target="_blank" href="http://cbseacademic.nic.in/web_material/CurriculumMain20/SrSecondary/${getSubject(subject)}.pdf">Curriculum</a>`
   ].join("");
   result.innerHTML = html;
+}
+
+function getSubject(subject) {
+  switch(subject) {
+    case 'Economics':
+      return 'Econonics'
+    case 'EnglishCore':
+      return 'Eng.Core'
+    default:
+      return subject 
+  }
 }
