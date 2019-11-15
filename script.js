@@ -16,7 +16,8 @@ select.addEventListener("change", e => {
 function printresult(subject) {
   const html = [
     `<a target="_blank" href="http://cbseacademic.nic.in/web_material/SQP/ClassXII_2019_20/${subject}_SQP.pdf">Sample Paper</a>`,
-    `<a target="_blank" href="http://cbseacademic.nic.in/web_material/SQP/ClassXII_2019_20/${subject}_MS.pdf">Answers</a>`
+    `<a target="_blank" href="http://cbseacademic.nic.in/web_material/SQP/ClassXII_2019_20/${subject}_MS.pdf">Answers</a>`,
+    `<a target="_blank" href="http://cbseacademic.nic.in/web_material/CurriculumMain20/SrSecondary/${subject}.pdf">Curriculum</a>`
   ].join("");
   result.innerHTML = html;
 }
