@@ -1,37 +1,38 @@
 a {
-     display: block;
+  display: block;
 }
- * {
-     -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-     box-sizing: border-box;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-select { font-size: 1.2em; }
- body {
-     margin: 0;
-     padding: 3em;
-     text-align: center;
-     min-height: 100vh;
-     max-width: 100%;
-     display: grid;
-     grid-template-rows: 10% auto;
-     font-family: sans-serif;
+select {
+  font-size: 1.2em;
 }
- .result {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     -ms-align-items: center;
-     align-items: center;
-     transition: 170ms all ease-in-out
-     ;
+body {
+  margin: 0;
+  padding: 3em;
+  text-align: center;
+  min-height: 100vh;
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: 10% auto;
+  font-family: sans-serif;
 }
- a {
-     display: block;
-     margin: 1em 0;
-     font-size: 2em;
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  transition: 90ms all ease-in-out;
+}
+a {
+  display: block;
+  margin: 1em 0;
+  font-size: 2em;
 }
 
 .animate {
-     opacity: .6;
+  opacity: 0.6;
 }
