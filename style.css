@@ -9,11 +9,16 @@ a {
 select {
   font-size: 1.2em;
 }
+
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 3em;
   text-align: center;
-  min-height: 100vh;
   max-width: 100%;
   display: grid;
   grid-template-rows: 10% auto;
@@ -35,4 +40,19 @@ a {
 
 .animate {
   opacity: 0.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: #ccc;
+  }
+
+  a {
+    color: #9dabee;
+  }
+
+  a:visited {
+    color: #8a59cc;
+  }
 }
