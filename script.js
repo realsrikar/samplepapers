@@ -3,7 +3,35 @@ const result = document.querySelector(".result");
 
 printresult(select.value);
 
-select.addEventListener("change", e => {
+select.addEventListener("change", triggerChange);
+addEventListener("keydown", e => {
+  let next = -1; // false
+  switch (e.keyCode) {
+    case 39:
+    case 74:
+      next *= -1;
+      break;
+    case 37:
+    case 75:
+      break;
+    default:
+      next = 0;
+  }
+
+  const currentIndex = select.selectedIndex;
+  const total = select.childElementCount - 1;
+  const newIndex =
+    currentIndex === 0 && next === -1 // first option & want to go back
+      ? total // send to last
+      : currentIndex === total && next === 1 // last option & want to go forward
+      ? 0 // send to begin
+      : currentIndex + next;
+  select.selectedIndex = newIndex;
+
+  triggerChange();
+});
+
+function triggerChange() {
   const selected = select.value;
 
   printresult(selected);
@@ -11,7 +39,7 @@ select.addEventListener("change", e => {
   result.classList.add("animate");
 
   setTimeout(_ => result.classList.remove("animate"), 180);
-});
+}
 
 function printresult(subject) {
   const html = [
