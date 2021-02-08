@@ -27,7 +27,7 @@ addEventListener("keydown", e => {
       ? 0 // send to begin
       : currentIndex + next;
   select.selectedIndex = newIndex;
-
+  if (next == 0) return;
   triggerChange();
 });
 
